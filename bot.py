@@ -8,9 +8,10 @@ from telegram.ext import (
 from notion_client import Client
 
 # ===================== SOZLAMALAR =====================
-TELEGRAM_TOKEN = "BU_YERGA_TELEGRAM_TOKEN_YOZING"
-NOTION_TOKEN = "BU_YERGA_NOTION_TOKEN_YOZING"
-NOTION_DATABASE_ID = "BU_YERGA_NOTION_DATABASE_ID_YOZING"
+import os
+TELEGRAM_TOKEN = os.environ["TELEGRAM_TOKEN"]
+NOTION_TOKEN = os.environ["NOTION_TOKEN"]
+NOTION_DATABASE_ID = os.environ["NOTION_DATABASE_ID"]
 
 # ===================== LOGGING =====================
 logging.basicConfig(level=logging.INFO)
